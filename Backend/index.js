@@ -122,7 +122,7 @@ app.use(cors());
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb+srv://raviranjankumar130082002:Ravi138@localhost:27017/?result_database?retryWrites=true&w=majorit", {
+  .connect("mongodb://localhost:27017/result_database", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
