@@ -7,7 +7,7 @@ const GetDetails = () => {
 
   const fetchResults = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/results/${name}`);
+      const response = await axios.get(`https://result-tracker-5.onrender.com/api/results/${name}`);
       setResults(response.data);
     } catch (err) {
       console.error(err);

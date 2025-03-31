@@ -176,7 +176,7 @@ const SetDetails = () => {
   const fetchStudentDetails = async (name) => {
     if (name.length < 3) return;
     try {
-      const response = await axios.get(`http://localhost:5000/api/students/${name}`);
+      const response = await axios.get(`https://result-tracker-5.onrender.com/api/students/${name}`);
       setFormData((prevData) => ({
         ...prevData,
         fatherName: response.data.fatherName,
@@ -222,7 +222,7 @@ const SetDetails = () => {
         : formData.subjectMarks.mathematics.totalMark);
 
     try {
-      await axios.post("http://localhost:5000/api/results", {
+      await axios.post("https://result-tracker-5.onrender.com/api/results", {
         ...formData,
         totalMarks,
       });
